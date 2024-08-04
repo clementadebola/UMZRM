@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaChurch } from 'react-icons/fa';
+import welcomeImg from '../assets/welcomeImg.jpg';
 
 const WelcomeWrapper = styled.div`
   display: flex;
@@ -58,7 +59,7 @@ const WelcomeContent: React.FC = () => {
           you'll find a warm and welcoming home here.
         </p>
       </WelcomeText>
-      <WelcomeImage src="/path-to-welcome-image.jpg" alt="Church community" />
+      <WelcomeImage src={welcomeImg} alt="Church community" />
     </WelcomeWrapper>
   );
 };
