@@ -24,7 +24,7 @@ const GiveLifeContainer = styled.div`
 
 const PastorImage = styled.img`
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -83,11 +83,11 @@ const StepDetails = styled(motion.p)`
 const steps = [
   {
     title: "Acknowledge all your sins Acts 2:36 - 38",
-    details: "Reflect on your past actions and recognize areas where you've fallen short of God's standards."
+    details: "Reflect on your past actions and recognize areas where you've fallen short of God's standards. Therefore let all the house of Israel know assuredly, that God hath made the same Jesus, whom ye have crucified, both Lord and Christ. 37 Now when they heard this, they were pricked in their heart, and said unto Peter and to the rest of the apostles, Men and brethren, what shall we do? 38 Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins, and ye shall receive the gift of the Holy Ghost."
   },
   {
     title: "Confess those sins. Galatians 5:19 - 21",
-    details: "Openly admit your sins to God, being specific about your wrongdoings."
+    details: "Now the works of the flesh are manifest, which are these; Adultery, fornication, uncleanness, lasciviousness, 20 Idolatry, witchcraft, hatred, variance, emulations, wrath, strife, seditions, heresies, 21 Envyings, murders, drunkenness, revellings, and such like: of the which I tell you before, as I have also told you in time past, that they which do such things shall not inherit the kingdom of God."
   },
   {
     title: "Ask for forgiveness of sin . I John 1:9",
