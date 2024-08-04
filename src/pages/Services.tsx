@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ServicesContainer = styled.div`
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
+  height: 100vh;
 `;
 
 const Title = styled.h1`

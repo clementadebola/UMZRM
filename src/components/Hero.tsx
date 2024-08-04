@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import backview from '../assets/backView.jpeg';
 
 const fadeIn = keyframes`
   from { opacity: 0; }
@@ -7,7 +8,7 @@ const fadeIn = keyframes`
 `;
 
 const HeroContainer = styled.div`
-  background-image: url('/path-to-your-background-image.jpg');
+  background-image: url(${backview});
   background-size: cover;
   background-position: center;
   height: 100vh;

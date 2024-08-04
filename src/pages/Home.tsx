@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { FaChurch, FaCalendarAlt, FaHandsHelping, FaVideo } from 'react-icons/fa';
+// import { FaChurch, FaCalendarAlt, FaHandsHelping, FaVideo } from 'react-icons/fa';
 import Hero from '../components/Hero';
 import Stats from '../components/Stats';
 import UpcomingEvents from '../components/UpcomingEvents';
