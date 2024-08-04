@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import backview from '../assets/backView.jpeg';
+import backview from '../assets/backview.jpeg';
 
 const fadeIn = keyframes`
   from { opacity: 0; }

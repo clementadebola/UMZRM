@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaChurch, FaHeart, FaCross, FaPrayingHands } from 'react-icons/fa';
-import backview from '../assets/backView.jpeg';
+import backview from '../assets/backview.jpeg';
 import logo from '../assets/logo.png';
 
 const AboutContainer = styled.div`
