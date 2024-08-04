@@ -9,6 +9,7 @@ import Ministries from '../components/Ministries';
 import Testimonials from '../components/Testimonials';
 import WelcomeContent from '../components/WelcomeContent';
 import GiveLifeToJesus from '../components/GiveLifeToJesus';
+import SomeOneToTalkTo from '../components/SomeOneToTalkTo';
 
 
 const HomeContainer = styled.div`
@@ -62,9 +63,17 @@ const Home: React.FC = () => {
         <Ministries />
       </AnimatedSection>
       <AnimatedSection>
+        <SectionTitle>Someone To Talk To</SectionTitle>
+        <SomeOneToTalkTo />
+      </AnimatedSection>
+
+
+      <AnimatedSection>
         <SectionTitle>Testimonials</SectionTitle>
         <Testimonials />
       </AnimatedSection>
+
+
     </HomeContainer>
   );
 };
