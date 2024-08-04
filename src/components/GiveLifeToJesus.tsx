@@ -12,20 +12,37 @@ const GiveLifeContainer = styled.div`
   padding: 2rem;
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 `;
 
 const PastorImage = styled.img`
-  width: 40%;
+  width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    width: 40%;
+    margin-bottom: 0;
+  }
 `;
 
 const StepsContainer = styled.div`
-  flex: 1;
-  margin-left: 2rem;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex: 1;
+    margin-left: 2rem;
+  }
 `;
 
 const StepItem = styled.div`
@@ -50,7 +67,11 @@ const StepHeader = styled.div`
 
 const StepTitle = styled.h3`
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const StepDetails = styled(motion.p)`

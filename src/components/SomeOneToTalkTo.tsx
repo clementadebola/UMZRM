@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import background from '../assets/backview.jpeg'
+import background from '../assets/backview.jpeg';
 import pastorImg from '../assets/pastorImg.png';
 
 const SectionWrapper = styled.section`
@@ -8,30 +8,64 @@ const SectionWrapper = styled.section`
   background-image: url(${background});
   background-size: cover;
   background-position: center;
-  padding: 40px;
+  padding: 20px;
   color: white;
-  height: 300px; // Adjust as needed
+  min-height: 400px;
+  border-radius: 20px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    padding: 40px;
+    height: 400px;
+  }
 `;
 
 const ContentWrapper = styled.div`
   position: relative;
   z-index: 2;
+  max-width: 100%;
+
+  @media (min-width: 768px) {
+    max-width: 60%;
+  }
 `;
 
 const Title = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #c5ff00;
   margin-bottom: 20px;
-  max-width: 70%;
   line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 2.8rem;
+  }
 `;
 
 const Subtitle = styled.p`
   font-size: 1rem;
-  margin-bottom: 10px;
-  max-width: 60%;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+`;
+
+const ButtonWrapper = styled.div`
+  position: relative;
+  z-index: 3;
+  align-self: flex-start;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    align-self: flex-end;
+    margin-right: 40px;
+    margin-top: 0;
+  }
 `;
 
 const ContactButton = styled.button`
@@ -39,19 +73,33 @@ const ContactButton = styled.button`
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 20px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff8c00;
+  }
+
+  @media (min-width: 768px) {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+  }
 `;
 
 const PastorImageWrapper = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 40%;
-  height: 100%;
+  width: 50%;
+  height: 60%;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    width: 40%;
+    height: 100%;
+  }
 `;
 
 const PastorImage = styled.img`
@@ -73,14 +121,25 @@ const TextFadeOverlay = styled.div`
 `;
 
 const ChatIcon = styled.div`
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   background-color: #25D366;
   color: white;
-  padding: 10px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
   z-index: 3;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const ChallengeSection: React.FC = () => {
@@ -92,14 +151,16 @@ const ChallengeSection: React.FC = () => {
           There are competent & Spirit filled Counsellors, Pastors & Ministers willing to speak with you at any time.
         </Subtitle>
         <Subtitle>Don't keep it all in, speak to someone now.</Subtitle>
-        <ContactButton>Contact Us</ContactButton>
       </ContentWrapper>
       <PastorImageWrapper>
         <PastorImage src={pastorImg} alt="Pastor speaking" />
       </PastorImageWrapper>
       <TextFadeOverlay />
+      <ButtonWrapper>
+        <ContactButton>Contact Us</ContactButton>
+      </ButtonWrapper>
       <ChatIcon>
-        {/* Add chat icon here */}
+        <span role="img" aria-label="chat">💬</span>
       </ChatIcon>
     </SectionWrapper>
   );
