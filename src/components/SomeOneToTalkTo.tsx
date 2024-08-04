@@ -157,7 +157,9 @@ const ChallengeSection: React.FC = () => {
       </PastorImageWrapper>
       <TextFadeOverlay />
       <ButtonWrapper>
-        <ContactButton>Contact Us</ContactButton>
+        <ContactButton>Contact Us
+          
+        </ContactButton>
       </ButtonWrapper>
       <ChatIcon>
         <span role="img" aria-label="chat">💬</span>

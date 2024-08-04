@@ -1,19 +1,18 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled, { keyframes } from "styled-components";
 // import { FaChurch, FaCalendarAlt, FaHandsHelping, FaVideo } from 'react-icons/fa';
-import Hero from '../components/Hero';
-import Stats from '../components/Stats';
-import UpcomingEvents from '../components/UpcomingEvents';
-import LiveStream from '../components/Livestream';
-import Ministries from '../components/Ministries';
-import Testimonials from '../components/Testimonials';
-import WelcomeContent from '../components/WelcomeContent';
-import GiveLifeToJesus from '../components/GiveLifeToJesus';
-import SomeOneToTalkTo from '../components/SomeOneToTalkTo';
-
+import Hero from "../components/Hero";
+import Stats from "../components/Stats";
+import UpcomingEvents from "../components/UpcomingEvents";
+import LiveStream from "../components/Livestream";
+import Ministries from "../components/Ministries";
+import Testimonials from "../components/Testimonials";
+import WelcomeContent from "../components/WelcomeContent";
+import GiveLifeToJesus from "../components/GiveLifeToJesus";
+import SomeOneToTalkTo from "../components/SomeOneToTalkTo";
 
 const HomeContainer = styled.div`
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 `;
 
 const Section = styled.section`
@@ -21,10 +20,14 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   color: #003366;
   text-align: center;
   margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const fadeIn = keyframes`
@@ -42,38 +45,49 @@ const Home: React.FC = () => {
       <Hero />
       <Stats />
       <AnimatedSection>
-        <SectionTitle>Welcome to Our Church</SectionTitle>
+        <SectionTitle>
+          <h2>Welcome to Our Church</h2>
+        </SectionTitle>
         <WelcomeContent />
       </AnimatedSection>
       <AnimatedSection>
-        <SectionTitle>Give Your Life to Jesus</SectionTitle>
+        <SectionTitle>
+          <h2>Give Your Life to Jesus</h2>
+        </SectionTitle>
         <GiveLifeToJesus />
       </AnimatedSection>
 
       <AnimatedSection>
-        <SectionTitle>Upcoming Events</SectionTitle>
+        <SectionTitle>
+          <h2>Upcoming Events</h2>
+        </SectionTitle>
         <UpcomingEvents />
       </AnimatedSection>
       <AnimatedSection>
-        <SectionTitle>Live Stream</SectionTitle>
+        <SectionTitle>
+          <h2>Live Stream</h2>
+        </SectionTitle>
         <LiveStream />
       </AnimatedSection>
       <AnimatedSection>
-        <SectionTitle>Our Ministries</SectionTitle>
+        <SectionTitle>
+          <h2>Our Ministries</h2>
+        </SectionTitle>
         <Ministries />
       </AnimatedSection>
       <AnimatedSection>
-        <SectionTitle>Someone To Talk To</SectionTitle>
+        <SectionTitle>
+          <h2>Someone To Talk To</h2>
+        </SectionTitle>
         <SomeOneToTalkTo />
       </AnimatedSection>
 
-
       <AnimatedSection>
-        <SectionTitle>Testimonials</SectionTitle>
+        <SectionTitle>
+          <h2> Testimonials</h2>
+        </SectionTitle>
         <Testimonials />
       </AnimatedSection>
-
-
     </HomeContainer>
   );
 };

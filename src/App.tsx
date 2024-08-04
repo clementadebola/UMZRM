@@ -8,6 +8,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import GlobalStyles from './GlobalStyles';
+import ScrollToTop from './components/ScrollToTop';
 
 const AppContainer = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ const App: React.FC = () => {
       <AppContainer>
         <GlobalStyles />
         <Header />
+        <ScrollToTop/>
         <ContentWrapper>
           <Routes>
             <Route path="/" element={<Home />} />
