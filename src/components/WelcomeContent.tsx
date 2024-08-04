@@ -4,22 +4,37 @@ import { FaChurch } from 'react-icons/fa';
 
 const WelcomeWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const WelcomeText = styled.div`
   flex: 1;
-  padding-right: 2rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    padding-right: 2rem;
+    margin-bottom: 0;
+  }
 `;
 
 const WelcomeImage = styled.img`
-  flex: 1;
-  max-width: 50%;
+  width: 100%;
+  max-width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
 `;
 
 const IconWrapper = styled.div`

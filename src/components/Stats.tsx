@@ -6,6 +6,7 @@ const StatsContainer = styled.div`
   background: linear-gradient(135deg, #003366, #0066cc);
   color: white;
   padding: 3rem 0;
+
 `;
 
 const StatsWrapper = styled.div`
@@ -15,6 +16,10 @@ const StatsWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
+     @media (max-width: 768px) {
+   flex-direction: column;
+  }
 `;
 
 const countUp = keyframes`

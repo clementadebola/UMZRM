@@ -5,17 +5,13 @@ import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import logo from '../assets/logo.png';
 
 const HeaderContainer = styled.header<{ scrolled: boolean }>`
-  background: ${(props) =>
-    props.scrolled
-      ? "linear-gradient(135deg, #003366, #0066cc)"
-      : "transparent"};
   color: white;
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
-  background: black;
+  background: linear-gradient(135deg, #003366, #0066cc);
 `;
 
 const HeaderWrapper = styled.div`

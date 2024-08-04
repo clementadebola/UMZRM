@@ -17,7 +17,7 @@ const AppContainer = styled.div`
 
 const ContentWrapper = styled.div`
   flex: 1;
-  padding-top: 70px;
+  padding-top: 100px;
 `;
 
 const App: React.FC = () => {
