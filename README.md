@@ -1,6 +1,3 @@
-Certainly! Here's a creative and brief README file for your church website codebase:
-
----
 
 # ⛪ Church Website
 
