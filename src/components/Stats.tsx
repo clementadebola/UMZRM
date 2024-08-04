@@ -70,17 +70,17 @@ const Stats: React.FC = () => {
       <StatsWrapper>
         <StatItem>
           <StatIcon><FaGlobe /></StatIcon>
-          <StatNumber>197</StatNumber>
-          <StatLabel>Countries & Territories</StatLabel>
+          <StatNumber>1</StatNumber>
+          <StatLabel>Countries</StatLabel>
         </StatItem>
         <StatItem>
           <StatIcon><FaUsers /></StatIcon>
-          <StatNumber>9M+</StatNumber>
-          <StatLabel>Members Worldwide</StatLabel>
+          <StatNumber>10K+</StatNumber>
+          <StatLabel>Members Nationwide</StatLabel>
         </StatItem>
         <StatItem>
           <StatIcon><FaChurch /></StatIcon>
-          <StatNumber>50K+</StatNumber>
+          <StatNumber>50+</StatNumber>
           <StatLabel>Parishes</StatLabel>
         </StatItem>
       </StatsWrapper>

@@ -8,6 +8,7 @@ import LiveStream from '../components/Livestream';
 import Ministries from '../components/Ministries';
 import Testimonials from '../components/Testimonials';
 import WelcomeContent from '../components/WelcomeContent';
+import GiveLifeToJesus from '../components/GiveLifeToJesus';
 
 
 const HomeContainer = styled.div`
@@ -43,6 +44,11 @@ const Home: React.FC = () => {
         <SectionTitle>Welcome to Our Church</SectionTitle>
         <WelcomeContent />
       </AnimatedSection>
+      <AnimatedSection>
+        <SectionTitle>Give Your Life to Jesus</SectionTitle>
+        <GiveLifeToJesus />
+      </AnimatedSection>
+
       <AnimatedSection>
         <SectionTitle>Upcoming Events</SectionTitle>
         <UpcomingEvents />
