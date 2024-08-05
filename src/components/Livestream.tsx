@@ -34,20 +34,51 @@ const LiveIcon = styled.span`
   margin-left: 0.5rem;
 `;
 
+const ThumbnailContainer = styled.div`
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  cursor: pointer;
+`;
+
+const Thumbnail = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 const LiveStream: React.FC = () => {
+  const [isPlaying, setIsPlaying] = React.useState(false);
+
+  const handleThumbnailClick = () => {
+    setIsPlaying(true);
+  };
+
   return (
     <LiveStreamContainer>
       <h3>
         <FaVideo /> Watch Our Live Stream <LiveIcon>LIVE</LiveIcon>
       </h3>
-      <VideoContainer>
-        <iframe
-          src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID"
-          frameBorder="0"
-          allowFullScreen
-          title="Church Live Stream"
-        ></iframe>
-      </VideoContainer>
+      {isPlaying ? (
+        <VideoContainer>
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https://fb.watch/tN4ULk-4aI/&show_text=0&width=560"
+            frameBorder="0"
+            allowFullScreen
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Church Live Stream"
+          ></iframe>
+        </VideoContainer>
+      ) : (
+        <ThumbnailContainer onClick={handleThumbnailClick}>
+          <Thumbnail src="https://via.placeholder.com/800x450.png?text=Watch+Live+Stream+Thumbnail" alt="Watch Live Stream Thumbnail" />
+        </ThumbnailContainer>
+      )}
       <p>Join us every Sunday at 10:00 AM for our live-streamed service</p>
     </LiveStreamContainer>
   );
