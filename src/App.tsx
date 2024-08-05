@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SmallFooter from './components/SmallFooter';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -21,7 +22,13 @@ const ContentWrapper = styled.div`
   padding-top: 100px;
 `;
 
+const FooterWrapper: React.FC = () => {
+  const location = useLocation();
+  return location.pathname === '/' ? <Footer /> : <SmallFooter />;
+};
+
 const App: React.FC = () => {
+
   return (
     <Router>
       <AppContainer>
@@ -36,7 +43,7 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </ContentWrapper>
-        <Footer />
+        <FooterWrapper />
       </AppContainer>
     </Router>
   );
