@@ -83,7 +83,7 @@ const Contact = () => {
   const churchPhone = "+2348012345678"; // Example Nigerian phone number
   const churchEmail = "contact@example-church.com";
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted:", { name, email, message });
     setName("");
