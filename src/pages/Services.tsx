@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { FaChurch, FaBook, FaPray, FaCalendarAlt, FaUsers } from 'react-icons/fa';
 
