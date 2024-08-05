@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaVideo } from 'react-icons/fa';
+import thumbnail from '../assets/cover.jpg';
 
 const LiveStreamContainer = styled.div`
   max-width: 800px;
@@ -54,6 +55,7 @@ const Thumbnail = styled.img`
 
 const LiveStream: React.FC = () => {
   const [isPlaying, setIsPlaying] = React.useState(false);
+  const videoUrl = "https://fb.watch/tN4ULk-4aI/";
 
   const handleThumbnailClick = () => {
     setIsPlaying(true);
@@ -67,7 +69,7 @@ const LiveStream: React.FC = () => {
       {isPlaying ? (
         <VideoContainer>
           <iframe
-            src="https://www.facebook.com/plugins/video.php?href=https://fb.watch/tN4ULk-4aI/&show_text=0&width=560"
+           src={`https://www.facebook.com/plugins/video.php?href=${videoUrl}&show_text=0&width=560`}
             frameBorder="0"
             allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
@@ -76,7 +78,7 @@ const LiveStream: React.FC = () => {
         </VideoContainer>
       ) : (
         <ThumbnailContainer onClick={handleThumbnailClick}>
-          <Thumbnail src="https://via.placeholder.com/800x450.png?text=Watch+Live+Stream+Thumbnail" alt="Watch Live Stream Thumbnail" />
+          <Thumbnail src={thumbnail} alt="Watch Live Stream Thumbnail" />
         </ThumbnailContainer>
       )}
       <p>Join us every Sunday at 10:00 AM for our live-streamed service</p>
