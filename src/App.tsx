@@ -10,6 +10,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import GlobalStyles from './GlobalStyles';
 import ScrollToTop from './components/ScrollToTop';
+import Search from './components/Search';
 
 const AppContainer = styled.div`
   display: flex;
@@ -41,6 +42,7 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
         </ContentWrapper>
         <FooterWrapper />

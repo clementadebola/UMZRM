@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import logo from '../assets/logo.png';
+import ScrollToTop from "./ScrollToTop";
+import { useNavigate } from "react-router-dom";
 
 const HeaderContainer = styled.header<{ scrolled: boolean }>`
   color: white;
@@ -109,11 +111,14 @@ const SearchIcon = styled(FaSearch)`
   top: 50%;
   transform: translateY(-50%);
   color: white;
+  cursor: pointer;
 `;
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -128,12 +133,25 @@ const Header: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery("");
+      setIsOpen(false);
+    }
+  };
+
   return (
     <HeaderContainer scrolled={scrolled}>
       <HeaderWrapper>
-      <Link to="/">
-        <Logo src={logo} alt="Church Logo" />
-      </Link>
+        <Link to="/" onClick={ScrollToTop}>
+          <Logo src={logo} alt="Church Logo" />
+        </Link>
 
         <MenuButton onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
@@ -152,8 +170,15 @@ const Header: React.FC = () => {
             Contact
           </NavItem>
           <SearchContainer>
-            <SearchInput type="text" placeholder="Search..." />
-            <SearchIcon />
+            <form onSubmit={handleSearchSubmit}>
+              <SearchInput
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+              <SearchIcon onClick={() => handleSearchSubmit} type="submit" />
+            </form>
           </SearchContainer>
         </NavItems>
       </HeaderWrapper>

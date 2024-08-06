@@ -1,7 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import background from '../assets/backview.jpeg';
-import pastorImg from '../assets/pastorImg.png';
+import React from "react";
+import styled from "styled-components";
+import background from "../assets/backview.jpeg";
+import pastorImg from "../assets/pastorImg.png";
+import { useNavigate } from "react-router-dom";
 
 const SectionWrapper = styled.section`
   position: relative;
@@ -116,7 +117,11 @@ const TextFadeOverlay = styled.div`
   bottom: 0;
   width: 100%;
   height: 50%;
-  background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   z-index: 1;
 `;
 
@@ -124,7 +129,7 @@ const ChatIcon = styled.div`
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background-color: #25D366;
+  background-color: #25d366;
   color: white;
   width: 50px;
   height: 50px;
@@ -143,12 +148,16 @@ const ChatIcon = styled.div`
 `;
 
 const ChallengeSection: React.FC = () => {
+  const navigate = useNavigate();
+
+
   return (
     <SectionWrapper>
       <ContentWrapper>
         <Title>You Can Talk to Someone no matter what the challenge is.</Title>
         <Subtitle>
-          There are competent & Spirit filled Counsellors, Pastors & Ministers willing to speak with you at any time.
+          There are competent & Spirit filled Counsellors, Pastors & Ministers
+          willing to speak with you at any time.
         </Subtitle>
         <Subtitle>Don't keep it all in, speak to someone now.</Subtitle>
       </ContentWrapper>
@@ -157,12 +166,12 @@ const ChallengeSection: React.FC = () => {
       </PastorImageWrapper>
       <TextFadeOverlay />
       <ButtonWrapper>
-        <ContactButton>Contact Us
-          
-        </ContactButton>
+        <ContactButton onClick={() => navigate('/contact')}>Contact Us</ContactButton>
       </ButtonWrapper>
       <ChatIcon>
-        <span role="img" aria-label="chat">💬</span>
+        <span role="img" aria-label="chat">
+          💬
+        </span>
       </ChatIcon>
     </SectionWrapper>
   );

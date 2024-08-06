@@ -42,9 +42,9 @@ const EventDate = styled.p`
 `;
 
 const events = [
-  { title: 'Sunday Service', date: 'Every Sunday, 10:00 AM' },
-  { title: 'Bible Study', date: 'Every Wednesday, 7:00 PM' },
-  { title: 'Youth Night', date: 'First Friday of the month, 6:00 PM' },
+  { title: 'Sunday Service', date: 'Every Sunday, 9:00 AM' },
+  { title: 'Bible Study', date: 'Every Tuesday, 7:00 PM' },
+  { title: 'Deliverance Night Vigil', date: 'Last Friday of the month, 11:00 PM' },
 ];
 
 const UpcomingEvents: React.FC = () => {
