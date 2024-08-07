@@ -8,6 +8,13 @@ const SmallFooterWrapper = styled.footer`
   height: 70px;
   text-align: center;
   font-size: 0.9rem;
+  color: grey;
+
+  @media (max-width: 768px){
+
+  font-size: 0.8rem;
+  
+  }
 `;
 
 const SmallFooter: React.FC = () => {

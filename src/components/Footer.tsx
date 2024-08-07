@@ -86,10 +86,10 @@ const Footer: React.FC = () => {
         <FooterSection>
           <FooterTitle>Connect With Us</FooterTitle>
           <SocialIcons>
-            <SocialIcon href="#"><FaFacebook /></SocialIcon>
+            <SocialIcon href="https://www.facebook.com/UPMZRM/"><FaFacebook /></SocialIcon>
             <SocialIcon href="#"><FaTwitter /></SocialIcon>
             <SocialIcon href="#"><FaInstagram /></SocialIcon>
-            <SocialIcon href="#"><FaYoutube /></SocialIcon>
+            <SocialIcon href="https://www.youtube.com/@uponmountzionrmtv/"><FaYoutube /></SocialIcon>
           </SocialIcons>
         </FooterSection>
       </FooterWrapper>
